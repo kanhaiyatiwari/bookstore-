@@ -1,9 +1,14 @@
 package com.bookStore.entiry;
 
+import java.awt.print.Book;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +25,8 @@ public class User {
 	private String role;
 	@Embedded
 	private Adress adress;
+	@OneToMany(mappedBy = "User", cascade = CascadeType.ALL)
+	private List<Book> book;
 	
 	
 }

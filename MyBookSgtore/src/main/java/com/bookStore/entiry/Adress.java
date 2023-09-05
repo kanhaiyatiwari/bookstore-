@@ -1,8 +1,14 @@
 package com.bookStore.entiry;
 
-public class Adress {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-	private String city;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Adress {
+    private String city;
 	private String state;
 	private String country;
 	
